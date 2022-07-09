@@ -14,31 +14,17 @@ HTML（超文本标记语言——HyperText Markup Language）是构成 Web 世�
 
 ## 3.DEMO
 
-:::demo 注意：[vuepress 安装 element-ui 的坑](https://blog.csdn.net/qq_32855007/article/details/108726430)
+
+:::demo 使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
 ```vue
 <template>
-  <div class="container">
-    <el-button type="primary" @click="hello">{{ btnText }}</el-button>
-  </div>
+  <el-button>默认按钮</el-button>
+  <el-button type="primary">主要按钮</el-button>
+  <el-button type="success">成功按钮</el-button>
+  <el-button type="info">信息按钮</el-button>
+  <el-button type="warning">警告按钮</el-button>
+  <el-button type="danger">危险按钮</el-button>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      btnText: "Hello World!",
-    };
-  },
-  methods: {
-    hello() {
-      alert("Hello World!");
-    },
-  },
-};
-</script>
-<style>
-.container {
-  display: flex;
-  justify-content: center;
-}
-</style>
 ```
+
+:::

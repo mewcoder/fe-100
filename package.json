@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "rc": "vitepress-rc"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,10 @@
   "homepage": "https://github.com/mewcoder/vitepress-demo#readme",
   "devDependencies": {
     "vitepress": "1.0.0-alpha.4",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "@algolia/client-search": "^4.13.1",
+    "element-plus": "^2.2.9",
+    "vitepress-theme-demoblock": "^1.4.2"
   },
   "pnpm": {
     "peerDependencyRules": {

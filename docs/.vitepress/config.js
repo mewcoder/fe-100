@@ -36,4 +36,11 @@ export default defineConfig({
     },
   },
   appearance: true,
+  markdown: {
+    theme: "one-dark-pro",
+    config: (md) => {
+      const { demoBlockPlugin } = require("vitepress-theme-demoblock");
+      md.use(demoBlockPlugin);
+    },
+  },
 });
