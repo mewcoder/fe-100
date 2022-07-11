@@ -4,6 +4,7 @@ export default defineConfig({
   lang: "zh-CN",
   title: "前端百题斩",
   description: "精选前端面试题",
+  // base: "fe-100",
   themeConfig: {
     nav: [
       {
