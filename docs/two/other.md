@@ -1,3 +1,9 @@
+---
+outline: deep
+---
+
+# 综合
+
 ## 性能优化的手段
 
 答案
@@ -76,9 +82,7 @@
   - 按需加载 import
   - 分包
   - externals 配合，cdn引入
----
-outline: deep
----
+
 
 ## 有限状态机、parser
 

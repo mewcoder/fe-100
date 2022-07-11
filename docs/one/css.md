@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# ⭐CSS
+# CSS
 
 ## 01. 盒模型
 
@@ -18,7 +18,7 @@ outline: deep
 
 
 
-### 02. position
+## 02. position
 
 - static：默认值
 - relative：相对元素自身位置
@@ -29,14 +29,14 @@ outline: deep
 
 
 
-### 03.  伪类/伪元素
+## 03.  伪类/伪元素
 
 - 伪类选择器：选择处于特定状态的元素的选择器，`:hover`  / `:first-child`
 - 伪元素选择器：用于设置元素指定部分的样式， `::before` / `::first-line`
 
 
 
-### 04. 选择器优先级
+## 04. 选择器优先级
 
 - !important 
 - 内联样式 
@@ -53,7 +53,7 @@ a[href="https://example.org"] {
 
 
 
-### 05. 清除浮动
+## 05. 清除浮动
 
 父元素不写高度时，子元素浮动后，脱离文档流，父元素会发生高度塌陷（造成父元素高度为 0）
 
@@ -73,7 +73,7 @@ a[href="https://example.org"] {
 
 
 
-### 06. BFC
+## 06. BFC
 
 块级格式化上下文；独立的渲染区域；只有块级元素参与，它规定了内部的块级元素如何布局；
 
@@ -124,7 +124,7 @@ a[href="https://example.org"] {
 
 
 
-### 07.flex
+## 07.flex
 
 弹性布局，flex容器所有子元素都会成为它的item。有两个轴，主轴和交叉轴，默认沿水平主轴
 
@@ -159,7 +159,7 @@ a[href="https://example.org"] {
 
 
 
-### 08.居中
+## 08.居中
 
 - 行内元素 ：水平：`text-align:center `  垂直：`line-height=height` ;`vertical-align:middle`
 
@@ -171,7 +171,7 @@ a[href="https://example.org"] {
 
 
 
-### 09.三角形
+## 09.三角形
 
 设置border-color 对应的地方为透明 transparent
 
@@ -186,7 +186,7 @@ div {
 
 
 
-### 10.自适应正方形
+## 10.自适应正方形
 
 1. 高度用vw，宽度用百分比：width: 100%; height: 100vw;
 
@@ -226,7 +226,7 @@ div {
 
 
 
-### 11. display: none / visibility:hidden/opacity:0
+## 11. display: none / visibility:hidden/opacity:0
 
 - `display:none`会让元素完全从渲染树中消失，渲染时不会占据任何空间，会造成重排。
 - `visibility:hidden`不会让元素从渲染树中消失，渲染的元素还会占据相应的空间，只是内容不可见，只造成重绘。占据空间，无法点击 。
@@ -234,7 +234,7 @@ div {
 
 
 
-### 12. 硬件加速
+## 12. 硬件加速
 
 触发 gpu 渲染会新建一个图层，把该元素样式的计算交给 gpu。
 
@@ -250,7 +250,7 @@ transform:translate3d(0, 0, 0);
 
 
 
-### 13. 重排重绘
+## 13. 重排重绘
 
 重排：DOM元素的几何信息(大小和位置)发生变化，或者获取几何信息有关的属性。
 
@@ -269,7 +269,7 @@ transform:translate3d(0, 0, 0);
 
 
 
-### 14 效果和动画
+## 14 效果和动画
 
 - tansform
   - translate(x,y) 移动

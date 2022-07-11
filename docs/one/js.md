@@ -2,6 +2,8 @@
 outline: deep
 ---
 
+# JavaScript
+
 ## 01.类型判断
 
 - 原始数据类类型：Undefined、Null、Boolean、Number、String、Symbol、BigInt
@@ -49,7 +51,7 @@ function myInstanceOf(obj, Type) {
 
 如果要判断的是基本数据类型或 JavaScript内置对象，使用 toString；如果要判断的是自定义类型，可以使用`instanceof`。
 
-### 02.判断数组
+## 02.判断数组
 
 - `Array.isArray(arr)`
 - `Object.prototype.toString.call(arr).slice(8,-1) === 'Array'`
@@ -58,7 +60,7 @@ function myInstanceOf(obj, Type) {
 
 
 
-### 03.浮点数精度
+## 03.浮点数精度
 
 - 在 JavaScript 中, Number 是一种 定义为 64 位双精度浮点型 (IEEE 754)的数字数据类型
 - 64位 = 1位符号位 + 11位指数位 + 52位小数位
@@ -87,7 +89,7 @@ function add(num1, num2) {
 
 
 
-### 04.类型转换
+## 04.类型转换
 
 `==`
 
@@ -104,7 +106,7 @@ function add(num1, num2) {
 对象会按优先级调用 [Symbol.toPrimitive] / valueof / toString 方法
 
 
-### 05.Object.is
+## 05.Object.is
 
 - 使用双等号（==）进行相等判断时，如果两边的类型不一致，则会进行强制类型转化后再进行比较。
 - 使用三等号（===）进行相等判断时，如果两边的类型不一致时，不会做强制类型准换，直接返回 false。
@@ -128,7 +130,7 @@ function add(num1, num2) {
 
 
 
-### 06.核心概念
+## 06.核心概念
 
 #### 01.变量提升和暂时性死区
 
@@ -234,7 +236,7 @@ Function.prototype.myBind = function(obj, ...args) {
 
 
 
-### 07.继承的方式
+## 07.继承的方式
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/338495/1625043301872-32a96c0d-9108-4e2c-9563-5cc933b9355a.png)
 
@@ -275,9 +277,9 @@ funtion inherit(Child,Parent){
 ```
 
 
-### ES6
+## ES6
 
-#### 01.var/let/const
+### 01.var/let/const
 
 | **区别**           | **var** | **let** | **const** |
 | ------------------ | ------- | ------- | --------- |
@@ -290,7 +292,7 @@ funtion inherit(Child,Parent){
 | 能否改变指针指向   | √       | √       | ×         |
 
 
-#### 02.箭头函数
+### 02.箭头函数
 
 - 箭头函数不会创建自己的 this，从上一层作用域继承 this
 - call()、apply()、bind() 等方法不能改变箭头函数中 this 的指向，静态作用域
@@ -299,7 +301,7 @@ funtion inherit(Child,Parent){
 - 不能使用 yield命令，箭头函数不能用作 Generator 函数。
 
 
-#### 03.展开语法/剩余参数
+### 03.展开语法/剩余参数
 
 剩余语法(Rest syntax) 看起来和展开语法(Spread syntax)完全相同，不同点在于, 展开语法用于解构数组和对象。从某种意义上说，剩余语法与展开语法是相反的：**展开**语法将数组展开为其中的各个元素，而剩余语法则是将多个元素**收集**起来。
 
@@ -317,7 +319,7 @@ let n = { x, y, ...z }; // spread
 let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 }; //rest
 ```
 
-#### 04.解构赋值
+### 04.解构赋值
 
 通过**解构赋值, **可以将属性/值从对象/数组中取出,赋值给其他变量。
 
@@ -353,7 +355,7 @@ var [one, two, three] = foo;
 
 
 
-### 01.类数组
+## 01.类数组
 
 一个拥有 length 属性和若干索引属性的对象就可以被称为类数组对象，类数组对象和数组类似，但是不能调用数组的方法。
 
@@ -375,7 +377,7 @@ var arrayLike = {
 
 
 
-### 02.严格模式
+## 02.严格模式
 
 ```jsx
 'use strict';
@@ -400,7 +402,7 @@ myIterable[Symbol.iterator] = function* () {
 
 
 
-### 03.IIFE
+## 03.IIFE
 
 立即调用函数表达式
 
@@ -415,7 +417,7 @@ myIterable[Symbol.iterator] = function* () {
 
 
 
-### 04.语句和表达式
+## 04.语句和表达式
 
 - 语句：语句分为声明语句、流程控制语句和其他语句。
 - 表达式：返回一个值，有副作用的（比如赋值）和单纯计算求值
@@ -446,7 +448,7 @@ let sayHi = function() {
 
 
 
-### 05.函数式编程
+## 05.函数式编程
 
 - 函数是一等公民，可以作为函数的入参和返回值
 - 声明式编程 map/filter等
@@ -465,7 +467,7 @@ const compose = (f, g) => x => f(g(x))
 
 
 
-### 06.哪些操作会造成内存泄漏
+## 06.哪些操作会造成内存泄漏
 
 - 全局变量，这些数据只有在窗口关闭或重新刷新页面时才会被释放
 - 不合理使用的闭包，导致变量一直存在内存中
@@ -480,7 +482,7 @@ const compose = (f, g) => x => f(g(x))
 
 
 
-### 实现sizeOf函数, 计算传入的对象所占的Bytes
+## 实现sizeOf函数, 计算传入的对象所占的Bytes
 
 ```javascript
 function sizeOf(o){
@@ -493,14 +495,14 @@ function sizeOf(o){
 }
 ```
 
-### for循环问题
+## for循环问题
 
 - var for里面定义的变量渗透到了外部
 - let 块级作用域，每次循环重新声明一个变量
 
 
 
-### 垃圾回收机制
+## 垃圾回收机制
 
 - 堆
 - 引用计数法/标记清除法（可达性分析）
@@ -509,7 +511,7 @@ function sizeOf(o){
 
 
 
-### ['1', '2', '3'].map(parseInt)
+## ['1', '2', '3'].map(parseInt)
 
 `[1, NaN, NaN]`
 
@@ -526,7 +528,7 @@ parseInt('2', 1) // NaN ，radix === 1 非法（不在 2-36 之内）
 parseInt('3', 2) // NaN ，2 进制中没有 3
 ```
 
-### 防抖节流
+## 防抖节流
 
 ```javascript
 function throttle(fn,timeout){
@@ -546,13 +548,11 @@ function debounce(fn,timeout){
 }
 ```
 
-### 遍历对比
+## 遍历对比
 
 
 
-
-
-sort原理
+## sort原理
 
 - 小于10 插入排序
 - 大于10 快速排序

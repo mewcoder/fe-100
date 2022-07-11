@@ -1,6 +1,12 @@
-# 浏览器/网络/HTML/DOM
+---
+outline: deep
+---
 
-## offsetHeight-scrollHeight-clientHeight-区别
+# 浏览器
+
+## HTML/DOM
+
+### offsetHeight-scrollHeight-clientHeight-区别
 
 - style.width的返回值是字符串，并且带有单位
 - offsetHeight/offsetWidth ：border + padding + content
@@ -15,7 +21,7 @@
 - document.documentElement.scrollHeight：html元素高度
 - document.body.clientHeight：body元素高度
 
-## property 和 attribute区别
+### property 和 attribute区别
 
 - property：每个DOM节点都是 JS 对象，操作 property 是 JS 范畴的
 - attribute：是DOM上的属性
@@ -25,25 +31,25 @@
 - 自定义的 property 与 attribute 不同步,不相等
 - 非自定义的 DOM property 与 attributes 是有条件同步的（如 value不会同步）
 
-## async 和 defer 区别
+### async 和 defer 区别
 
 - 两个都是异步加载 JS 脚本，不阻塞 html 解析
 -  defer 是先加载，等到dom解析完，在DOMContentLoaded事件之前执行脚本
 - async 是加载完立即执行
 - type="module" 等同于defer
 
-## href 和 src 区别
+### href 和 src 区别
 
 - href 用于建立当前页面与引用资源之间的关系（链接）如 a / link，
 -  src 则会替换当前标签，如 img / script/ iframe
 
-## CSS会阻塞渲染吗
+### CSS会阻塞渲染吗
 
 - CSS 不会阻塞 DOM 解析（link在head中）
 - CSS 会阻塞 DOM 树的渲染（阻塞render tree的形成）
 - 会阻塞后面的 JS 的执行（JS可以更改DOM样式）
 
-## HTML5 新特性
+### HTML5 新特性
 
 - 语义化标签
 - canvas/svg
@@ -56,7 +62,7 @@
 
 
 
-## token会劫持的问题
+### token会劫持的问题
 
 - token 是为了防止 csrf 攻击的，因为浏览器会自动携带同域 Cookie 发送请求。
 - CSRF 的过程：
@@ -70,9 +76,9 @@
 
 
 
-# 网络/浏览器
+## 网络/浏览器
 
-## TCP和UDP区别
+### TCP和UDP区别
 
 - TCP是面向字节流的(可拆分/合并)，UDP是面向报文的
 - TCP面向连接，UDP无连接
@@ -82,7 +88,7 @@
 
 
 
-## HTTP/1.1长连接 和 HTTP/2.0多路复用?
+### HTTP/1.1长连接 和 HTTP/2.0多路复用?
 
 - HTTP/1.1：同⼀时间⼀个TCP连接只能处理⼀个请求, 采⽤⼀问⼀答的形式, 上⼀个请求响应后才能处理下⼀个请求. 由于浏览器最⼤TCP连接数的限制, 所以有了最⼤并发请求数的限制.
 - HTTP/2.0：同域名下所有通信都在单个连接上完成，消除了因多个 TCP 连接⽽带来的延时和内存消耗。单个连接上可以并⾏交错的请求和响应，之间互不干扰。
@@ -97,7 +103,7 @@
 
 
 
-## HTTPS
+### HTTPS
 
 HTTS 其实就是 HTTP+TLS 的传输方式，TLS 叫传输层安全，之前叫 SSL（安全套接层）。
 
@@ -121,7 +127,7 @@ HTTS 其实就是 HTTP+TLS 的传输方式，TLS 叫传输层安全，之前叫 
 
 
 
-## 长连接/长轮询/短轮询/websocket
+### 长连接/长轮询/短轮询/websocket
 
 - 长连接：`Connection：keep-alive`
 - 长轮询：服务端将请求挂起一定的时间再返回（微信二维码）
@@ -130,7 +136,7 @@ HTTS 其实就是 HTTP+TLS 的传输方式，TLS 叫传输层安全，之前叫 
 
 
 
-## DNS解析
+### DNS解析
 
 **DNS（Domain Name System，域名系统）是一个将域名和 IP 地址相互映射的分布式服务**
 
@@ -144,7 +150,7 @@ HTTS 其实就是 HTTP+TLS 的传输方式，TLS 叫传输层安全，之前叫 
 
 
 
-## 浏览器安全
+### 浏览器安全
 
 **csrf：跨站请求伪造(Cross—Site Request Forgery)** 
 
@@ -181,7 +187,7 @@ HTTS 其实就是 HTTP+TLS 的传输方式，TLS 叫传输层安全，之前叫 
 
 
 
-## 浏览器存储
+### 浏览器存储
 
 **Cookie**：4K，用于HTTP请求头，同源，每个域名Cookie数量不超过20个
 
@@ -214,7 +220,7 @@ HTTS 其实就是 HTTP+TLS 的传输方式，TLS 叫传输层安全，之前叫 
 **IndexedDB**：用于客户端存储大量结构化数据，采用键值存储，接近NoSQL数据库，同源策略，支持异步，支持事务，空间大（不少于250M）
 
 
-## 跨域问题
+### 跨域问题
 
 同源策略：协议+域名+端口
 
@@ -275,7 +281,7 @@ Access-Control-Request-Methods: POST,GET,OPTIONS
 
 
 
-## HTTP状态码
+### HTTP状态码
 
 - 1××：中间状态
 
@@ -317,7 +323,7 @@ Access-Control-Request-Methods: POST,GET,OPTIONS
 
 
 
-## 缓存
+### 缓存
 
 浏览器缓存：Service Worker / Memory Cache / Disk Cache / Push Cache
 
@@ -340,7 +346,7 @@ HTTP缓存：
 
 
 
-## 事件循环
+### 事件循环
 
 JS 是单线程的语言，只有一个执行栈，先执行当前任务，遇到异步事件就放入任务队列中，分为宏任务和微任务，当前宏任务执行完会处理所有的微任务，再从宏任务队列中取一个开始下一个宏任务。
 
@@ -378,7 +384,7 @@ Node:
 
 
 
-## 从输入URL到显示页面
+### 从输入URL到显示页面
 
 - 浏览器处理URL
 
@@ -405,7 +411,7 @@ Node:
 
 
 
-## rAF/rIC
+### rAF/rIC
 
 - `requestAnimationFrame`：告诉浏览器在下一次绘制之前执行该回
 - `requestIdleCallback`：在浏览器空闲的事件执行

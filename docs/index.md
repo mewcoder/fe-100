@@ -7,7 +7,7 @@ titleTemplate: 面试题
 hero:
   name: 前端百题斩
   text: 精选前端面试题
-  tagline: JavaScript, CSSm, Vue, Webpack
+  tagline: JavaScript, CSS, Vue, Webpack
   actions:
     - theme: brand
       text: 开始
