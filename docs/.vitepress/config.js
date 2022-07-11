@@ -2,45 +2,51 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   lang: "zh-CN",
-  title: "标题",
-  description: "副标题",
+  title: "前端百题斩",
+  description: "精选前端面试题",
   themeConfig: {
     nav: [
-      { text: "引导", link: "/guide/" },
       {
-        text: "配置",
+        text: "基础",
         items: [
-          { text: "doc1", link: "/config/doc1" },
-          { text: "doc2", link: "/config/doc2" },
+          { text: "JavaScript", link: "/one/js" },
+          { text: "CSS", link: "/one/css" },
+          { text: "浏览器", link: "/one/browser" },
+        ],
+      },
+      {
+        text: "综合",
+        items: [
+          { text: "vue", link: "/two/vue" },
+          { text: "webpack", link: "/two/webpack" },
+          { text: "其他", link: "/two/other" },
         ],
       },
     ],
-    sidebar: {
-      "/guide/": [
-        {
-          title: "引导",
-          collapsible: false,
-          items: [{ text: "引导", link: "/guide/" }],
-        },
-      ],
-      "/config/": [
-        {
-          title: "配置",
-          collapsible: false,
-          items: [
-            { text: "doc1", link: "/config/doc1" },
-            { text: "doc2", link: "/config/doc2" },
-          ],
-        },
-      ],
-    },
+    // sidebar: {
+    //   "/one/": [
+    //     {
+    //       title: "引导",
+    //       collapsible: false,
+    //       items: [
+    //         { text: "JavaScript", link: "/one/js" },
+    //         { text: "CSS", link: "/one/css" },
+    //         { text: "浏览器", link: "/one/browser" },
+    //       ],
+    //     },
+    //   ],
+    //   "/two/": [
+    //     {
+    //       title: "配置",
+    //       collapsible: false,
+    //       items: [
+    //         { text: "JavaScript", link: "/one/js" },
+    //         { text: "CSS", link: "/one/css" },
+    //         { text: "浏览器", link: "/one/browser" },
+    //       ],
+    //     },
+    //   ],
+    // },
   },
   appearance: true,
-  markdown: {
-    theme: "one-dark-pro",
-    config: (md) => {
-      const { demoBlockPlugin } = require("vitepress-theme-demoblock");
-      md.use(demoBlockPlugin);
-    },
-  },
 });

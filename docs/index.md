@@ -1,26 +1,19 @@
 ---
 layout: home
 
-title: 标题
-titleTemplate: 副标题
+title: 前端百题斩
+titleTemplate: 面试题
 
 hero:
-  name: 标题
-  text: 副标题
-  tagline: tag1, tag2, tag3
+  name: 前端百题斩
+  text: 精选前端面试题
+  tagline: JavaScript, CSSm, Vue, Webpack
   actions:
     - theme: brand
       text: 开始
-      link: /guide/
+      link: /one/js
     - theme: alt
       text: GitHub
-      link: https://github.com/mewcoder
+      link: https://github.com/mewcoder/fe-100
 
-features:
-  - title: 1
-    details: 1111111111
-  - title: 2
-    details: 2222222222
-  - title: 3
-    details: 33333333
 ---
